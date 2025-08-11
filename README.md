@@ -10,7 +10,7 @@ El primero en reducir la vida del rival a **0%** gana la partida.
 
 ## 📸 Vista previa
 
-![Vista previa](img/captura.png) <!-- Cambia por tu screenshot si tienes uno -->
+![Vista previa](img/captura.png)
 
 ---
 
@@ -63,7 +63,7 @@ batalla-epica/
 * **Daño:** Modifica el cálculo de daño en `script.js` para ajustar la dificultad:
 
   ```javascript
-  let daño = Math.floor(Math.random() * 20) + 5; // Daño entre 5 y 25
+  let daño = Math.floor(Math.random() * 20) + 5; 
   ```
 
 
