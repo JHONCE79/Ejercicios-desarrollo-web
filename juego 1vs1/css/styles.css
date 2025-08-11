@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #222;
+    color: white;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.contenedor-jugadores {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.jugador {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.avatar {
+    width: 150px;
+    height: auto;
+}
+
+.vida {
+    background-color: red;
+    width: 100%;
+    height: 20px;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+
+.barra {
+    background-color: green;
+    height: 100%;
+    width: 100%;
+    transition: width 0.3s ease;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: #666;
+    cursor: not-allowed;
+}
+
+.turno {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.mensajes {
+    background-color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#zona-ataque {
+    position: relative;
+    flex: 1;
+    height: 200px;
+}
+
+.proyectil {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: #ff6b35;
+    border-radius: 50%;
+}
+
+.lanzado-1 {
+    left: 0;
+    animation: atacar1 0.5s linear forwards;
+}
+
+.lanzado-2 {
+    right: 0;
+    animation: atacar2 0.5s linear forwards;
+}
+
+@keyframes atacar1 {
+    0% { left: 0; transform: rotate(0deg); }
+    100% { left: calc(100% - 40px); transform: rotate(360deg); }
+}
+
+@keyframes atacar2 {
+    0% { right: 0; transform: rotate(0deg); }
+    100% { right: calc(100% - 40px); transform: rotate(360deg); }
+}
